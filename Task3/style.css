@@ -1,0 +1,79 @@
+body {
+    background-color: rgb(245, 90, 34);
+    border: 4px solid black;
+    margin: 8px;
+    padding: 10px;
+    font-family: "Times New Roman", serif;
+}
+
+.head {
+    color: navy;
+}
+
+h1.head {
+    font-size: 22px;
+}
+
+#bglime {
+    background-color: #7dff7d;
+    font-size: 34px;
+}
+
+h2 span {
+    color: red;
+}
+
+h4.head {
+    font-size: 11px;
+}
+
+p {
+    color: white;
+    font-size: 20px;
+}
+
+#para {
+    color: green;
+    font-size: 13px;
+}
+
+p span {
+    font-size: 24px;
+    color: black;
+}
+
+h3 {
+    color: black;
+    font-size: 16px;
+}
+
+ul {
+    color: white;
+    font-size: 11px;
+}
+
+ul li:nth-child(1) a {
+    background-color: yellow;
+    color: black;
+    text-decoration: none;
+}
+
+ul li:nth-child(2) a {
+    background-color: blueviolet;
+    color: blue;
+    text-decoration: none;
+}
+
+ol {
+    color: #222;
+    font-size: 11px;
+    list-style-type: decimal;
+}
+
+ol li:nth-child(2) {
+    color: blue;
+}
+
+ol li:nth-child(3) {
+    color: red;
+}
