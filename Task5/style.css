@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+body {
+    background-color: white;
+    color: #4a5a6a;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #3d4b5a;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #5a6672;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #00a2ff;
+}
+
+.username {
+    background-color: #e6f5ff;
+    color: #00a2ff;
+    border: none;
+    padding: 18px 20px;
+    border-radius: 14px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 100px;
+}
+
+.hero-text {
+    width: 45%;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    line-height: 1.5;
+    color: #4a5a6a;
+}
+
+.hero-text h1 span {
+    color: #00a2ff;
+}
+
+.hero-text p {
+    margin-top: 10px;
+    font-size: 17px;
+    line-height: 1.5;
+    color: #9aa5b1;
+}
+
+.book-btn {
+    margin-top: 35px;
+    padding: 22px 32px;
+    border: none;
+    border-radius: 16px;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    background: linear-gradient(to right, #00a2ff, #33b5ff);
+}
+
+.hero-image {
+    width: 45%;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 380px;
+}
