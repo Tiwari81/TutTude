@@ -1,0 +1,12 @@
+# HTML and CSS Practice
+
+A simple web page built with HTML and CSS to practice common tags and selectors.
+
+## Files
+
+- `index.html` - page structure
+- `style.css` - page styling
+
+## How to Run
+
+Open `index.html` in any web browser.
