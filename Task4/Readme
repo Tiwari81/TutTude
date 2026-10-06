@@ -1,0 +1,13 @@
+# Click Me Card
+
+A simple web page built with HTML and CSS that shows an image with a gradient "Click Me" button below it.
+
+## Files
+
+- `index.html` - page structure
+- `style.css` - page styling
+- `image.jpg` - image shown in the card
+
+## How to Run
+
+Open `index.html` in any web browser.
