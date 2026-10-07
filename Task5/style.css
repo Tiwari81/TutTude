@@ -5,101 +5,215 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: white;
+    width: 100vw;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    overflow-x: hidden;
 }
 
-header {
-    height: 72px;
-    display: flex;
-    align-items: center;
-    padding: 0 48px;
+.navbar {
+    width: 100vw;
+    height: 10vh;
+    padding: 0 6vw;
     border-bottom: 1px solid #eeeeee;
+    white-space: nowrap;
 }
 
 .logo {
-    font-size: 20px;
-    font-weight: bold;
+    display: inline-block;
+    width: 20vw;
+    height: 10vh;
+    line-height: 10vh;
+    vertical-align: middle;
+    font-size: 1.5vw;
+    font-weight: 700;
     color: #52616d;
 }
 
-nav {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 25px;
+.nav-links {
+    display: inline-block;
+    width: 48vw;
+    height: 10vh;
+    line-height: 10vh;
+    text-align: center;
+    vertical-align: middle;
 }
 
-nav a {
+.nav-links a {
+    display: inline-block;
+    margin: 0 1.2vw;
     text-decoration: none;
     color: #71808c;
-    font-size: 13px;
+    font-size: 0.85vw;
 }
 
-.username {
-    margin-left: auto;
-    border: none;
-    background: #eef9ff;
-    color: #159fe5;
-    padding: 12px 17px;
-    border-radius: 8px;
-    font-size: 11px;
-    font-weight: bold;
-}
-
-.hero {
-    max-width: 650px;
-    margin: 55px auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-}
-
-.hero-content {
-    width: 350px;
-}
-
-.hero h1 {
-    font-size: 28px;
-    line-height: 1.4;
-    color: #52616d;
-}
-
-.hero h1 span {
+.nav-links a:hover {
     color: #08a8f5;
 }
 
-.hero p {
-    margin-top: 8px;
-    color: #a2adb5;
-    font-size: 13px;
-    line-height: 1.45;
-}
-
-.service-btn {
-    margin-top: 20px;
-    padding: 15px 32px;
+.username {
+    display: inline-block;
+    width: 8vw;
+    height: 5vh;
+    vertical-align: middle;
     border: none;
-    border-radius: 11px;
-    background: #12aaf0;
-    color: white;
-    font-size: 11px;
-    font-weight: bold;
+    border-radius: 0.8vw;
+    background-color: #eef9ff;
+    color: #159fe5;
+    font-size: 0.75vw;
+    font-weight: 600;
     cursor: pointer;
 }
 
+.username:hover {
+    background-color: #dff4ff;
+}
+
+
+.hero {
+    width: 82vw;
+    height: 70vh;
+    margin: 8vh auto 0;
+    white-space: nowrap;
+}
+
+.hero-content {
+    display: inline-block;
+    width: 48vw;
+    vertical-align: middle;
+    white-space: normal;
+}
+
+.hero-content h1 {
+    font-size: 2.8vw;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #52616d;
+}
+
+.hero-content h1 span {
+    color: #08a8f5;
+}
+
+.hero-content p {
+    width: 35vw;
+    margin-top: 1vh;
+    color: #a2adb5;
+    font-size: 1vw;
+    line-height: 1.5;
+}
+
+.service-btn {
+    width: 14vw;
+    height: 6vh;
+    margin-top: 3vh;
+    border: none;
+    border-radius: 1vw;
+    background: linear-gradient(
+        135deg,
+        #08a8f5,
+        #42b8f4
+    );
+    color: #ffffff;
+    font-size: 0.8vw;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.service-btn:hover {
+    background: #0798dc;
+}
+
+
 .hero-image {
-    width: 280px;
-    height: 280px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-block;
+    width: 30vw;
+    height: 45vh;
+    vertical-align: middle;
+    text-align: center;
+    white-space: normal;
 }
 
 .hero-image img {
-    width: 100%;
-    height: 100%;
+    width: 28vw;
+    height: 42vh;
     object-fit: contain;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        height: auto;
+        padding: 2vh 5vw;
+        white-space: normal;
+    }
+
+    .logo {
+        width: 25vw;
+        height: auto;
+        line-height: normal;
+        font-size: 5vw;
+    }
+
+    .nav-links {
+        width: 65vw;
+        height: auto;
+        line-height: normal;
+        text-align: right;
+    }
+
+    .nav-links a {
+        margin: 0 1vw;
+        font-size: 2vw;
+    }
+
+    .username {
+        width: 15vw;
+        height: 5vh;
+        font-size: 2vw;
+    }
+
+    .hero {
+        width: 90vw;
+        height: auto;
+        margin-top: 6vh;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .hero-content {
+        display: inline-block;
+        width: 85vw;
+    }
+
+    .hero-content h1 {
+        font-size: 7vw;
+    }
+
+    .hero-content p {
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 3vw;
+    }
+
+    .service-btn {
+        width: 35vw;
+        height: 7vh;
+        font-size: 2.5vw;
+    }
+
+    .hero-image {
+        display: inline-block;
+        width: 80vw;
+        height: 40vh;
+        margin-top: 5vh;
+    }
+
+    .hero-image img {
+        width: 70vw;
+        height: 38vh;
+    }
 }
