@@ -2,99 +2,104 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Inter", Arial, sans-serif;
 }
 
 body {
-    background-color: white;
-    color: #4a5a6a;
+    font-family: Arial, sans-serif;
+    background: white;
 }
 
-.navbar {
+header {
+    height: 72px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px 60px;
+    padding: 0 48px;
+    border-bottom: 1px solid #eeeeee;
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: 700;
-    color: #3d4b5a;
+    font-size: 20px;
+    font-weight: bold;
+    color: #52616d;
 }
 
 nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     gap: 25px;
 }
 
 nav a {
     text-decoration: none;
-    color: #5a6672;
-    font-size: 15px;
-}
-
-nav a:hover {
-    color: #00a2ff;
+    color: #71808c;
+    font-size: 13px;
 }
 
 .username {
-    background-color: #e6f5ff;
-    color: #00a2ff;
+    margin-left: auto;
     border: none;
-    padding: 18px 20px;
-    border-radius: 14px;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
+    background: #eef9ff;
+    color: #159fe5;
+    padding: 12px 17px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: bold;
 }
 
 .hero {
+    max-width: 650px;
+    margin: 55px auto;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 60px 100px;
+    justify-content: space-between;
+    gap: 40px;
 }
 
-.hero-text {
-    width: 45%;
+.hero-content {
+    width: 350px;
 }
 
-.hero-text h1 {
-    font-size: 40px;
-    line-height: 1.5;
-    color: #4a5a6a;
+.hero h1 {
+    font-size: 28px;
+    line-height: 1.4;
+    color: #52616d;
 }
 
-.hero-text h1 span {
-    color: #00a2ff;
+.hero h1 span {
+    color: #08a8f5;
 }
 
-.hero-text p {
-    margin-top: 10px;
-    font-size: 17px;
-    line-height: 1.5;
-    color: #9aa5b1;
+.hero p {
+    margin-top: 8px;
+    color: #a2adb5;
+    font-size: 13px;
+    line-height: 1.45;
 }
 
-.book-btn {
-    margin-top: 35px;
-    padding: 22px 32px;
+.service-btn {
+    margin-top: 20px;
+    padding: 15px 32px;
     border: none;
-    border-radius: 16px;
+    border-radius: 11px;
+    background: #12aaf0;
     color: white;
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 11px;
+    font-weight: bold;
     cursor: pointer;
-    background: linear-gradient(to right, #00a2ff, #33b5ff);
 }
 
 .hero-image {
-    width: 45%;
-    text-align: center;
+    width: 280px;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-image img {
     width: 100%;
-    max-width: 380px;
+    height: 100%;
+    object-fit: contain;
 }
