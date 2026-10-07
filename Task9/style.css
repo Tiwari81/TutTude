@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    color: #52616d;
+}
+
+.navbar {
+    width: 100vw;
+    height: 14vh;
+    padding: 0 8vw;
+    border-bottom: 1px solid #f1f1f1;
+    white-space: nowrap;
+}
+
+.logo {
+    display: inline-block;
+    width: 28vw;
+    line-height: 14vh;
+    font-size: 1.6vw;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.nav-links {
+    display: inline-block;
+    width: 42vw;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.nav-links a {
+    margin: 0 1vw;
+    color: #697783;
+    text-decoration: none;
+    font-size: 1vw;
+}
+
+.nav-links a:hover {
+    color: #13a9ed;
+}
+
+.username {
+    display: inline-block;
+    width: 8vw;
+    height: 5vh;
+    border: none;
+    border-radius: 1vw;
+    background-color: #eaf7fd;
+    color: #159ee3;
+    font-size: 0.8vw;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.hero {
+    width: 100vw;
+    min-height: 86vh;
+    padding: 10vh 8vw;
+    white-space: nowrap;
+}
+
+.hero-content {
+    display: inline-block;
+    width: 48vw;
+    vertical-align: middle;
+    white-space: normal;
+}
+
+.hero-content h1 {
+    font-size: 3.2vw;
+    line-height: 1.25;
+    color: #52616d;
+    margin-bottom: 1.5vh;
+}
+
+.hero-content h1 span {
+    color: #0da7ed;
+}
+
+.hero-content p {
+    width: 38vw;
+    font-size: 1.2vw;
+    line-height: 1.5;
+    color: #9ba6af;
+    margin-bottom: 4vh;
+}
+
+.cta-button {
+    display: inline-block;
+    width: 21vw;
+    height: 6vh;
+    border: none;
+    border-radius: 1vw;
+    background-color: #19aaf0;
+    color: white;
+    font-size: 1vw;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.15) rotate(-5deg);
+}
+
+.hero-image {
+    display: inline-block;
+    width: 40vw;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.hero-image img {
+    width: 35vw;
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 600px) {
+
+    .navbar {
+        height: 10vh;
+        padding: 0 5vw;
+        text-align: center;
+    }
+
+    .logo {
+        width: 30vw;
+        line-height: 10vh;
+        font-size: 5vw;
+        text-align: left;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .username {
+        width: 22vw;
+        height: 5vh;
+        font-size: 2.5vw;
+    }
+
+    .hero {
+        min-height: 90vh;
+        padding: 8vh 7vw;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .hero-content {
+        display: block;
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 7vw;
+        line-height: 1.25;
+    }
+
+    .hero-content p {
+        width: 85vw;
+        margin: 2vh auto 4vh;
+        font-size: 3.5vw;
+        line-height: 1.5;
+    }
+
+    .cta-button {
+        width: 55vw;
+        height: 7vh;
+        border-radius: 2vw;
+        font-size: 3vw;
+    }
+
+    .cta-button:hover {
+        transform: scale(1.12) rotate(-5deg);
+    }
+
+    .hero-image {
+        display: block;
+        width: 100%;
+        margin-top: 7vh;
+    }
+
+    .hero-image img {
+        width: 70vw;
+    }
+}
