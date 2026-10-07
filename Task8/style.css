@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+
+.navbar {
+    width: 100vw;
+    height: 10vh;
+    padding: 0 5vw;
+    border-bottom: 1px solid #eeeeee;
+    white-space: nowrap;
+}
+
+.logo {
+    display: inline-block;
+    width: 18vw;
+    height: 10vh;
+    line-height: 10vh;
+    vertical-align: middle;
+    color: #52616d;
+    font-size: 1.5vw;
+    font-weight: bold;
+}
+
+.desktop-menu {
+    display: inline-block;
+    width: 52vw;
+    height: 10vh;
+    line-height: 10vh;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.desktop-menu a {
+    display: inline-block;
+    margin: 0 1vw;
+    color: #71808c;
+    text-decoration: none;
+    font-size: 0.85vw;
+}
+
+.username {
+    display: inline-block;
+    width: 9vw;
+    height: 5vh;
+    vertical-align: middle;
+    border: none;
+    border-radius: 1vw;
+    background: #eef9ff;
+    color: #159fe5;
+    font-size: 0.75vw;
+    font-weight: bold;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+
+/* HERO */
+
+.hero {
+    width: 82vw;
+    margin: 8vh auto 0;
+    white-space: nowrap;
+}
+
+.hero-content {
+    display: inline-block;
+    width: 48vw;
+    vertical-align: middle;
+    white-space: normal;
+}
+
+.hero-content h1 {
+    color: #52616d;
+    font-size: 2.8vw;
+    line-height: 1.4;
+}
+
+.hero-content h1 span {
+    color: #08a8f5;
+}
+
+.hero-content p {
+    width: 35vw;
+    margin-top: 1vh;
+    color: #a2adb5;
+    font-size: 1vw;
+    line-height: 1.5;
+}
+
+.service-btn {
+    width: 14vw;
+    height: 6vh;
+    margin-top: 3vh;
+    border: none;
+    border-radius: 1vw;
+    background: #12aaf0;
+    color: white;
+    font-size: 0.8vw;
+    font-weight: bold;
+}
+
+.hero-image {
+    display: inline-block;
+    width: 30vw;
+    height: 45vh;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 28vw;
+    height: 42vh;
+    object-fit: contain;
+}
+
+
+/* MOBILE */
+
+@media screen and (max-width: 600px) {
+
+    .navbar {
+        display: block;
+        width: 100vw;
+        height: 10vh;
+        padding: 0 4vw;
+        position: relative;
+        background: white;
+        border-bottom: 1px solid #eeeeee;
+        white-space: nowrap;
+    }
+
+    .logo {
+        display: inline-block;
+        width: 38vw;
+        height: 10vh;
+        line-height: 10vh;
+        font-size: 5vw;
+        vertical-align: middle;
+    }
+
+    .desktop-menu {
+        display: none;
+    }
+
+    .username {
+        display: inline-block;
+        width: 21vw;
+        height: 5vh;
+        margin-left: 2vw;
+        border-radius: 2vw;
+        font-size: 2.5vw;
+        vertical-align: middle;
+    }
+
+    .menu-icon {
+        display: inline-block;
+        width: 8vw;
+        height: 10vh;
+        line-height: 10vh;
+        margin-left: 2vw;
+        color: #52616d;
+        font-size: 5vw;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    /* MOBILE MENU */
+
+    .mobile-menu {
+        position: fixed;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 55vw;
+        height: 100vh;
+        padding-top: 42vh;
+        background: #000000;
+        z-index: 9999;
+        text-align: center;
+    }
+
+    #menu-toggle:checked ~ .mobile-menu {
+        display: block;
+    }
+
+    .mobile-menu a {
+        display: block;
+        margin-bottom: 2.5vh;
+        color: white;
+        text-decoration: none;
+        font-size: 4vw;
+    }
+
+    .close-menu {
+        position: absolute;
+        top: 2vh;
+        right: 4vw;
+        color: white;
+        font-size: 7vw;
+        cursor: pointer;
+    }
+
+
+    /* MOBILE HERO */
+
+    .hero {
+        width: 90vw;
+        margin: 4vh auto 0;
+        white-space: normal;
+    }
+
+    .hero-content {
+        display: inline-block;
+        width: 90vw;
+        vertical-align: top;
+    }
+
+    .hero-content h1 {
+        font-size: 7vw;
+        line-height: 1.35;
+    }
+
+    .hero-content p {
+        width: 82vw;
+        margin-top: 1vh;
+        font-size: 3vw;
+        line-height: 1.45;
+    }
+
+    .service-btn {
+        width: 45vw;
+        height: 7vh;
+        margin-top: 2vh;
+        border-radius: 3vw;
+        font-size: 2.5vw;
+    }
+
+    .hero-image {
+        display: inline-block;
+        width: 90vw;
+        height: 36vh;
+        margin-top: 3vh;
+        text-align: center;
+        vertical-align: top;
+    }
+
+    .hero-image img {
+        width: 68vw;
+        height: 36vh;
+        object-fit: contain;
+    }
+}
