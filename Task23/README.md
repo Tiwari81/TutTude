@@ -1,41 +1,42 @@
 # Greenwood Public Library Website
 
-## Project Files
+## About the Project
 
-- index.html
-- style.css
-- script.js
-- README.md
+Greenwood Public Library is a modern and responsive
+library website developed using HTML and Tailwind CSS.
 
 ## Technologies Used
 
 - HTML5
-- CSS3
+- Tailwind CSS
 - JavaScript
 
 ## Features
 
-- Responsive website layout
-- Navigation bar
-- Hero section
-- Library statistics
-- Six library sections
-- Library gallery
-- Why Greenwood section
-- About section
-- Membership plans
-- Customer testimonial
-- Contact information
-- Upcoming events
-- Footer
+- Responsive design
 - Mobile navigation menu
+- Library sections
+- Image gallery
+- Membership plans
+- Upcoming events
+- Contact information
+- Smooth scrolling navigation
+
+## Project Structure
+
+Greenwood-Library/
+│
+├── index.html
+├── script.js
+└── README.md
 
 ## How to Run
 
-1. Create a project folder.
-2. Create the four files listed above.
-3. Copy the respective code into each file.
-4. Keep all files in the same folder.
-5. Open index.html in your browser.
+1. Download or clone the project.
+2. Open the project folder.
+3. Open index.html in your browser.
+4. Make sure you have an internet connection.
 
-An internet connection is required for Google Fonts and Unsplash images.
+## Developer
+
+Created as a Greenwood Public Library Website project.
