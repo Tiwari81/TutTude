@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greenwood Public Library</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      font-family: "DM Sans", sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      color: #171717;
+    }
+
+    .muted {
+      color: #96918f;
+    }
+
+    .eyebrow {
+      color: #99918f;
+      letter-spacing: .12em;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    .section-line {
+      border-bottom: 1px solid #ecebea;
+    }
+
+    .gallery-img {
+      transition: transform .35s ease;
+    }
+
+    .gallery-card:hover .gallery-img {
+      transform: scale(1.035);
+    }
+
+    .zoom-overlay {
+      display: none;
+    }
+
+    .zoom-overlay.active {
+      display: flex;
+    }
+  </style>
+</head>
+
+<body class="bg-white">
+
+  <header class="fixed top-0 left-0 z-40 w-full border-b border-neutral-100 bg-white/95 backdrop-blur">
+    <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-5">
+
+      <a href="#top" class="flex items-center gap-3 text-lg font-semibold">
+        Greenwood
+        <span class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-normal text-emerald-800">Open Sat</span>
+      </a>
+
+      <nav class="hidden items-center gap-8 text-sm text-neutral-500 md:flex">
+        <a class="hover:text-black" href="#sections">Sections</a>
+        <a class="hover:text-black" href="#gallery">Gallery</a>
+        <a class="hover:text-black" href="#membership">Membership</a>
+        <a class="hover:text-black" href="#events">Events</a>
+      </nav>
+
+      <a href="#contact" class="rounded-full border border-neutral-200 px-5 py-2 text-sm hover:bg-neutral-100">
+        Visit Us
+      </a>
+
+      <button id="menuBtn" class="ml-3 text-2xl md:hidden" aria-label="Open menu">
+        ☰
+      </button>
+
+    </div>
+
+    <nav id="mobileMenu" class="hidden border-t border-neutral-100 bg-white px-5 py-4 md:hidden">
+      <div class="flex flex-col gap-4 text-sm text-neutral-600">
+        <a href="#sections">Sections</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#membership">Membership</a>
+        <a href="#events">Events</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top" class="mx-auto max-w-6xl px-5 pt-28">
+
+    <section class="grid items-center gap-12 pb-14 pt-8 md:grid-cols-2 md:gap-16">
+
+      <div>
+        <h1 class="max-w-xl text-5xl font-light leading-[1.02] tracking-tight md:text-6xl">
+          Your Neighbourhood<br>Library.
+        </h1>
+
+        <p class="muted mt-7 max-w-md text-lg leading-relaxed">
+          Thousands of books, quiet reading rooms, community events, and free Wi-Fi — serving Greenwood since 1983.
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#gallery" class="rounded-full bg-neutral-900 px-6 py-3 text-sm text-white hover:bg-neutral-700">
+            Explore Collection
+          </a>
+
+          <a href="#membership" class="rounded-full border border-neutral-300 px-6 py-3 text-sm hover:bg-neutral-50">
+            Join Free
+          </a>
+        </div>
+      </div>
+
+      <img
+        class="h-[340px] w-full rounded-xl object-cover md:h-[395px]"
+        src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1200&q=85"
+        alt="Library bookshelves"
+      >
+
+    </section>
+
+    <section class="grid grid-cols-2 gap-6 border-y border-neutral-200 py-8 md:grid-cols-4 md:gap-10">
+
+      <div>
+        <p class="text-2xl font-medium">12,000+</p>
+        <p class="muted mt-1 text-sm">Books & journals</p>
+      </div>
+
+      <div>
+        <p class="text-2xl font-medium">40+</p>
+        <p class="muted mt-1 text-sm">Years of service</p>
+      </div>
+
+      <div>
+        <p class="text-2xl font-medium text-emerald-600">Free</p>
+        <p class="muted mt-1 text-sm">Wi-Fi & basic access</p>
+      </div>
+
+      <div>
+        <p class="text-2xl font-medium">6</p>
+        <p class="muted mt-1 text-sm">Dedicated sections</p>
+      </div>
+
+    </section>
+
+    <section id="sections" class="scroll-mt-24 pt-24">
+
+      <div class="eyebrow section-line pb-4">Our Sections</div>
+
+      <div class="mt-8 grid gap-4 md:grid-cols-2">
+
+        <article class="bg-neutral-50 p-8">
+          <h3 class="text-xl font-medium">Fiction & Literature</h3>
+          <p class="muted mt-4 text-base">Novels, short stories, and poetry — from timeless classics to new voices.</p>
+          <a href="#gallery" class="mt-5 inline-block border-b border-neutral-400 text-sm text-neutral-500">Browse Fiction</a>
+        </article>
+
+        <article class="bg-amber-50 p-8">
+          <h3 class="text-xl font-medium text-amber-800">Children's Corner</h3>
+          <p class="muted mt-4 text-base">Picture books, early readers, and a cozy space for young learners.</p>
+          <a href="#events" class="mt-5 inline-block border-b border-amber-700 text-sm text-amber-800">Browse Children's</a>
+        </article>
+
+        <article class="bg-neutral-50 p-8">
+          <h3 class="text-xl font-medium">Science & Technology</h3>
+          <p class="muted mt-4 text-base">Research journals, textbooks, and STEM reference materials.</p>
+          <a href="#gallery" class="mt-5 inline-block border-b border-neutral-400 text-sm text-neutral-500">Browse Science</a>
+        </article>
+
+        <article class="bg-neutral-50 p-8">
+          <h3 class="text-xl font-medium">History & Culture</h3>
+          <p class="muted mt-4 text-base">Local archives, world civilisations, art history, and cultural studies.</p>
+          <a href="#gallery" class="mt-5 inline-block border-b border-neutral-400 text-sm text-neutral-500">Browse History</a>
+        </article>
+
+        <article class="bg-neutral-50 p-8">
+          <h3 class="text-xl font-medium">Periodicals & Newspapers</h3>
+          <p class="muted mt-4 text-base">Daily newspapers, magazines, and journals from around the world.</p>
+          <a href="#gallery" class="mt-5 inline-block border-b border-neutral-400 text-sm text-neutral-500">Browse Periodicals</a>
+        </article>
+
+        <article class="bg-neutral-50 p-8">
+          <h3 class="text-xl font-medium">Digital Media Lab</h3>
+          <p class="muted mt-4 text-base">Computers, digital resources, and tools for learning new skills.</p>
+          <a href="#gallery" class="mt-5 inline-block border-b border-neutral-400 text-sm text-neutral-500">Browse Digital</a>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="gallery" class="scroll-mt-24 pt-24">
+
+      <div class="eyebrow section-line pb-4">Our Spaces</div>
+
+      <div class="mt-7 flex items-center justify-between">
+        <h2 class="text-3xl font-medium">Inside the Library</h2>
+
+        <button id="viewAll" class="rounded-full border border-neutral-200 px-5 py-2 text-sm hover:bg-neutral-50">
+          View All
+        </button>
+      </div>
+
+      <div class="mt-6 grid gap-x-4 gap-y-7 md:grid-cols-2">
+
+        <article class="gallery-card">
+          <button class="zoom-trigger block w-full overflow-hidden rounded-lg">
+            <img class="gallery-img h-64 w-full object-cover"
+              src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1000&q=85"
+              alt="Reading hall">
+          </button>
+          <div class="mt-3 flex justify-between">
+            <span>Reading Hall</span>
+            <span class="rounded-full border border-neutral-200 px-3 py-1 text-xs muted">Main Floor</span>
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <button class="zoom-trigger block w-full overflow-hidden rounded-lg">
+            <img class="gallery-img h-64 w-full object-cover"
+              src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=1000&q=85"
+              alt="Fiction collection">
+          </button>
+          <div class="mt-3 flex justify-between">
+            <span>Fiction Collection</span>
+            <span class="rounded-full border border-neutral-200 px-3 py-1 text-xs muted">2nd Floor</span>
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <button class="zoom-trigger block w-full overflow-hidden rounded-lg">
+            <img class="gallery-img h-64 w-full object-cover"
+              src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1000&q=85"
+              alt="Archive wing">
+          </button>
+          <div class="mt-3 flex justify-between">
+            <span>Archive Wing</span>
+            <span class="rounded-full border border-neutral-200 px-3 py-1 text-xs muted">Basement</span>
+          </div>
+        </article>
+
+        <article class="gallery-card">
+          <button class="zoom-trigger block w-full overflow-hidden rounded-lg">
+            <img class="gallery-img h-64 w-full object-cover"
+              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=85"
+              alt="Digital media lab">
+          </button>
+          <div class="mt-3 flex justify-between">
+            <span>Digital Media Lab</span>
+            <span class="rounded-full border border-neutral-200 px-3 py-1 text-xs muted">Ground Floor</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="pt-24">
+
+      <div class="eyebrow section-line pb-4">Why Greenwood</div>
+
+      <div class="mt-8 grid gap-4 md:grid-cols-3">
+
+        <article class="flex min-h-64 flex-col justify-between bg-slate-50 p-8">
+          <span class="eyebrow">About</span>
+          <h3 class="text-2xl font-light uppercase leading-tight">A place for<br>everyone.</h3>
+        </article>
+
+        <article class="flex min-h-64 flex-col justify-between bg-emerald-100 p-8">
+          <span class="eyebrow">Community</span>
+          <h3 class="text-2xl font-light uppercase leading-tight">Open doors,<br>open minds.</h3>
+        </article>
+
+        <article class="flex min-h-64 flex-col justify-between bg-amber-50 p-8">
+          <span class="eyebrow">40+ Years</span>
+          <h3 class="text-2xl font-light uppercase leading-tight">Trusted by<br>generations.</h3>
+        </article>
+
+        <article class="flex min-h-64 flex-col justify-between bg-rose-50 p-8">
+          <span class="eyebrow">Events</span>
+          <h3 class="text-2xl font-light uppercase leading-tight">Learn beyond<br>books.</h3>
+        </article>
+
+        <article class="flex min-h-64 flex-col justify-between bg-violet-50 p-8">
+          <span class="eyebrow">Digital</span>
+          <h3 class="text-2xl font-light uppercase leading-tight">E-books, Wi-Fi,<br>& computers.</h3>
+        </article>
+
+        <article class="flex min-h-64 flex-col justify-between bg-neutral-50 p-8">
+          <span class="eyebrow">Access</span>
+          <h3 class="text-2xl font-light uppercase leading-tight">No barriers<br>to knowledge.</h3>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-3xl py-28">
+
+      <h2 class="text-3xl font-light leading-tight md:text-4xl">
+        More than a building full of books — a home for curious minds.
+      </h2>
+
+      <div class="muted mt-8 grid gap-8 text-base leading-relaxed md:grid-cols-2">
+
+        <p>
+          Greenwood Public Library has been at the heart of this community since 1983. We believe everyone deserves free access to knowledge, regardless of age, income, or background. Our six sections cover everything from fiction to digital media.
+        </p>
+
+        <p>
+          Beyond books, we host weekly events — reading challenges for children, book clubs, digital literacy workshops, and author meets. Our study rooms, free Wi-Fi, and welcoming staff make Greenwood a place people come back to, year after year.
+        </p>
+
+      </div>
+    </section>
+
+    <section id="membership" class="scroll-mt-24 pt-8">
+
+      <div class="eyebrow section-line pb-4">Membership</div>
+
+      <div class="mt-7 flex items-center justify-between">
+        <h2 class="text-3xl font-medium">Join the Library</h2>
+        <a href="#contact" class="rounded-full border border-neutral-200 px-5 py-2 text-sm">Sign Up</a>
+      </div>
+
+      <div class="mt-6 grid gap-3 md:grid-cols-4">
+
+        <article class="flex min-h-[410px] flex-col justify-between bg-emerald-50 p-8">
+          <div>
+            <span class="eyebrow">Choose a Plan</span>
+            <h3 class="mt-6 text-2xl font-light">Everyone is<br>welcome here.</h3>
+            <p class="muted mt-5 text-base">Membership unlocks borrowing, study rooms, and priority events.</p>
+          </div>
+          <a href="#contact" class="w-fit rounded-full bg-neutral-900 px-6 py-3 text-sm text-white">Learn More</a>
+        </article>
+
+        <article class="border border-neutral-200">
+          <img class="h-48 w-full object-cover"
+            src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=700&q=80"
+            alt="Basic membership">
+
+          <div class="flex h-52 flex-col p-5">
+            <h3 class="text-lg">Basic</h3>
+            <p class="mt-1 text-xl">Free</p>
+            <p class="muted mt-2 text-sm">3 books · Reading rooms · Wi-Fi</p>
+            <a href="#contact" class="mt-auto rounded-full border border-neutral-300 py-2 text-center text-sm">Join Free</a>
+          </div>
+        </article>
+
+        <article class="border border-neutral-300">
+          <div class="relative">
+            <img class="h-48 w-full object-cover"
+              src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=700&q=80"
+              alt="Student membership">
+            <span class="absolute right-3 top-3 rounded-full bg-neutral-900 px-3 py-1 text-xs text-white">Popular</span>
+          </div>
+
+          <div class="flex h-52 flex-col p-5">
+            <h3 class="text-lg">Student</h3>
+            <p class="mt-1 text-xl">₹200<span class="muted text-sm">/yr</span></p>
+            <p class="muted mt-2 text-sm">8 books · Digital catalogue · Study rooms</p>
+            <a href="#contact" class="mt-auto rounded-full bg-neutral-800 py-2 text-center text-sm text-white">Join Now</a>
+          </div>
+        </article>
+
+        <article class="border border-neutral-200">
+          <img class="h-48 w-full object-cover"
+            src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=700&q=80"
+            alt="Family membership">
+
+          <div class="flex h-52 flex-col p-5">
+            <h3 class="text-lg">Family</h3>
+            <p class="mt-1 text-xl">₹500<span class="muted text-sm">/yr</span></p>
+            <p class="muted mt-2 text-sm">15 books · All benefits · Priority events</p>
+            <a href="#contact" class="mt-auto rounded-full border border-neutral-300 bg-neutral-100 py-2 text-center text-sm">Join Now</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-2xl py-24">
+
+      <div class="border-t border-neutral-200 pt-10">
+
+        <div class="flex items-start gap-6">
+
+          <img class="h-14 w-14 rounded-full object-cover"
+            src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=160&q=80"
+            alt="Meera Desai">
+
+          <div>
+            <blockquote class="text-xl leading-relaxed">
+              "Greenwood has been my second home for fifteen years — it's where I learned to love reading."
+            </blockquote>
+
+            <p class="muted mt-4 text-sm">
+              — Meera Desai, volunteer at the children's section
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="scroll-mt-24 rounded-xl bg-emerald-50 px-8 py-16 md:px-14">
+
+      <div class="eyebrow">Contact</div>
+
+      <h2 class="mt-6 text-3xl font-light md:text-4xl">
+        Visit us at 42 Elm Street, Greenwood.
+      </h2>
+
+      <div class="muted mt-5 flex flex-wrap gap-x-8 gap-y-2 text-sm">
+        <span>Mon–Fri: 8am–7pm</span>
+        <span>Sat: 9am–5pm</span>
+        <span>Sun: Closed</span>
+      </div>
+
+      <div class="mt-8 flex flex-wrap items-center gap-4">
+        <a href="https://maps.google.com/?q=42+Elm+Street+Greenwood" target="_blank"
+          class="rounded-full bg-neutral-900 px-6 py-3 text-sm text-white">
+          Get Directions
+        </a>
+
+        <span class="muted text-sm">
+          (555) 012-3456 · hello@greenwoodlibrary.org
+        </span>
+      </div>
+
+    </section>
+
+    <section id="events" class="scroll-mt-24 pb-20 pt-24">
+
+      <div class="eyebrow section-line pb-4">Events</div>
+
+      <div class="mt-7 flex items-center justify-between">
+        <h2 class="text-3xl font-medium">What's Coming Up</h2>
+        <a href="#events" class="rounded-full border border-neutral-200 px-5 py-2 text-sm">All Events</a>
+      </div>
+
+      <div class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+
+        <article>
+          <img class="h-48 w-full rounded-lg object-cover"
+            src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80"
+            alt="Summer reading challenge">
+          <p class="mt-4 text-base">Summer Reading Challenge — open to children aged 6–14</p>
+          <p class="muted mt-2 text-sm">5 Aug 2026</p>
+        </article>
+
+        <article>
+          <img class="h-48 w-full rounded-lg object-cover"
+            src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=600&q=80"
+            alt="Book club">
+          <p class="mt-4 text-base">Book Club: Discussing <i>The God of Small Things</i></p>
+          <p class="muted mt-2 text-sm">10 Aug 2026</p>
+        </article>
+
+        <article>
+          <img class="h-48 w-full rounded-lg object-cover"
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80"
+            alt="Digital literacy workshop">
+          <p class="mt-4 text-base">Digital Literacy Workshop — free, no registration needed</p>
+          <p class="muted mt-2 text-sm">18 Aug 2026</p>
+        </article>
+
+        <article>
+          <img class="h-48 w-full rounded-lg object-cover"
+            src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=600&q=80"
+            alt="Author meet">
+          <p class="mt-4 text-base">Author Meet: Priya Sharma — Q&A and book signing</p>
+          <p class="muted mt-2 text-sm">25 Aug 2026</p>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="mx-auto max-w-6xl px-5 pb-8 pt-4">
+
+    <div class="grid gap-10 border-b border-neutral-200 pb-16 md:grid-cols-4">
+
+      <div>
+        <h3 class="font-semibold">Greenwood</h3>
+        <div class="mt-6 flex gap-2 text-xs text-neutral-500">
+          <a class="rounded-full bg-neutral-100 px-3 py-2" href="#">Fb</a>
+          <a class="rounded-full bg-neutral-100 px-3 py-2" href="#">Ig</a>
+          <a class="rounded-full bg-neutral-100 px-3 py-2" href="#">Tw</a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="border-b border-neutral-200 pb-3">Pages</h3>
+        <div class="muted mt-5 flex flex-col gap-3 text-sm">
+          <a href="#top">Home</a>
+          <a href="#sections">Sections</a>
+          <a href="#membership">Membership</a>
+          <a href="#events">Events</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="border-b border-neutral-200 pb-3">Sections</h3>
+        <div class="muted mt-5 flex flex-col gap-3 text-sm">
+          <a href="#sections">Fiction</a>
+          <a href="#sections">Children's</a>
+          <a href="#sections">Science</a>
+          <a href="#sections">History</a>
+          <a href="#sections">Periodicals</a>
+          <a href="#sections">Digital Lab</a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="border-b border-neutral-200 pb-3">Details</h3>
+        <div class="muted mt-5 flex flex-col gap-3 text-sm">
+          <span>42 Elm Street</span>
+          <span>(555) 012-3456</span>
+          <span>hello@greenwoodlibrary.org</span>
+          <span>Mon–Fri 8am–7pm</span>
+          <span>Sat 9am–5pm</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="muted flex justify-between pt-6 text-xs">
+      <span>© <span id="year"></span> Greenwood Public Library</span>
+
+      <div class="flex gap-8">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <div id="zoomOverlay" class="zoom-overlay fixed inset-0 z-50 items-center justify-center bg-black/90 p-5">
+
+    <button id="closeZoom" class="absolute right-6 top-4 text-4xl text-white" aria-label="Close image">
+      ×
+    </button>
+
+    <img id="zoomImage" class="max-h-[85vh] max-w-full rounded-lg object-contain" src="" alt="Expanded library view">
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
